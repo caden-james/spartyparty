@@ -139,6 +139,7 @@
         <img id="splittersparty" src="spartyhittinit.gif" height="100px" width="100px">
         <img id="wellshall" height="100px" width="100px">
         <img id="zeke" height="100px" width="100px">
+        <img id="combopic" height="100px" width="100px">
         <button class= button onclick="BuyWells()">Wells Hall [<span id='wellscost'>15</span>] -- <span id='wells'>0</span></button>
         <button class= button2 onclick="BuyFootball()">The Entire MSU Football Team [<span id='footballcost'>100</span>] -- <span id='footballs'>0</span></button>
         <button class= button3 onclick="BuyZeke()">Zeke The Wonderdog [<span id='zekecost'>500</span>] -- <span id='zekes'>0</span></button>
@@ -244,6 +245,8 @@
                     score = score-comboCost;
                     combos = combos+1;
                     comboCost = Math.round(comboCost*1.15);
+                    document.getElementById("combopic").src="spartyscombo.gif";
+
 
                     choir_sound();
                     document.getElementById("score").innerHTML = score;
