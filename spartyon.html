@@ -1,17 +1,41 @@
 <HTML>
     <head>
-        <title>Sparty Clicker!</title>
+        <title>Sparty Clicker</title>
     </head>
 
     <body>
         <p>Score: <span id="score">0</span></p>
         <img src="sparty on.png" height="256px" width="256px" onclick="myFunction(1)">
+        <button onclick="BuyWells()">Wells Hall [<span id='wellscost'>15</span>] -- <span id='wells'>0</span></button>
         <script>
             var score = 0;
+            var wellsCost = 15;
+            var wells = 0;
+
             function myFunction(amount) {
                 score = score+amount;
                 document.getElementById("score").innerHTML = score;
             }
+
+            function BuyWells() {
+                if (score >= wellsCost) {
+                    score = score-wellsCost;
+                    wells = wells+1;
+                    wellsCost = Math.round(wellsCost*1.15);
+
+                    document.getElementById("score").innerHTML = score;
+                    document.getElementById("wellscost").innerHTML = wellsCost;
+                    document.getElementById("wells").innerHTML = wells;
+                }
+            }
+
+            setInterval (function() {
+                score = score + wells;
+                document.getElementById("score").innerHTML = score;
+                
+            }, 1000);
+
+            
         </script>
     </body>
 <HTML>
