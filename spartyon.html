@@ -39,8 +39,10 @@
             margin-right: auto;
             width: 50%;
         }
-        body {
-        background-color: #000000;
+        body {    
+            background-image: url('msu.webp');
+            background-attachment: fixed; 
+            background-size: cover;
         }
         .funnyfont {
             color: rgb(255, 255, 255);
@@ -77,6 +79,7 @@
     <body>
         <p class="funnyfont">Sparty Cash: <span id="score">0</span></p>
         <img class= "spartan" id="sparty" src="sparty on.png" height="256px" width="256px" \ onclick="myfunc(1)" >
+        <img id="wells">
         <button class= button onclick="BuyWells()">Wells Hall [<span id='wellscost'>15</span>] -- <span id='wells'>0</span></button>
         <button class= button2 onclick="BuyFootball()">The Entire MSU Football Team [<span id='footballcost'>100</span>] -- <span id='footballs'>0</span></button>
         <button class= button3 onclick="BuyZeke()">Zeke The Wonderdog [<span id='zekecost'>500</span>] -- <span id='zekes'>0</span></button>
@@ -114,6 +117,7 @@
                     score = score-wellsCost;
                     wells = wells+1;
                     wellsCost = Math.round(wellsCost*1.15);
+                    document.getElementById("wells").src="wells hall.jpg";
 
                     money_sound();
                     document.getElementById("score").innerHTML = score;
@@ -151,8 +155,8 @@
 
             setInterval (function() {
                 score = score + wells;
-                score = score + (footballs * 20);
-                score = score + (zekes * 50)
+                score = score + (footballs * 12);
+                score = score + (zekes * 35)
                 document.getElementById("score").innerHTML = score;
                 
             }, 1000);
