@@ -23,6 +23,7 @@
             function myFunction(amount) {
                 score = score+amount;
                 document.getElementById("score").innerHTML = score;
+                bell_sound();
             }
 
             function BuyWells() {
@@ -68,7 +69,10 @@
                 var snd = new Audio('certified-badass.mp3');
                 snd.play();
             }
-            
+            function bell_sound(){
+                var snd = new Audio('bell-ding.mp3');
+                snd.play();
+            }
         </script>
     </body>
 <HTML>
