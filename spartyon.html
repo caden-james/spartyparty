@@ -5,7 +5,7 @@
 
     <body>
         <p>Sparty Cash: <span id="score">0</span></p>
-        <img src="sparty on.png" height="256px" width="256px" onclick="myFunction(1)">
+        <img id="sparty" src="sparty on.png" height="256px" width="256px" onclick="myFunction(1)">
         <button onclick="BuyWells()">Wells Hall [<span id='wellscost'>15</span>] -- <span id='wells'>0</span></button>
         <button onclick="BuyFootball()">The Entire MSU Football Team [<span id='footballcost'>100</span>] -- <span id='footballs'>0</span></button>
         <script>
@@ -19,6 +19,8 @@
             function myFunction(amount) {
                 score = score+amount;
                 document.getElementById("score").innerHTML = score;
+                document.getElementById("sparty").height="128px";
+                document.getElementById("sparty").width="128px";
             }
 
             function BuyWells() {
