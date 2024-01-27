@@ -41,7 +41,7 @@
 
     <body>
         <p>Sparty Cash: <span id="score">0</span></p>
-        <img src="sparty on.png" height="256px" width="256px" onclick="myFunction(1)">
+        <img id="sparty" src="sparty on.png" height="256px" width="256px" onclick="myfunc(1)">
         <button class= button onclick="BuyWells()">Wells Hall [<span id='wellscost'>15</span>] -- <span id='wells'>0</span></button>
         <button class= button2 onclick="BuyFootball()">The Entire MSU Football Team [<span id='footballcost'>100</span>] -- <span id='footballs'>0</span></button>
         <script>
@@ -52,9 +52,23 @@
             var footballCost = 100;
             var footballs = 0;
 
-            function myFunction(amount) {
+            function myfunc(amount) {
                 score = score+amount;
                 document.getElementById("score").innerHTML = score;
+                smallen();
+            }
+
+            function smallen() {
+                document.getElementById("sparty").style.width="222px";
+                document.getElementById("sparty").style.height="222px";
+                setTimeout(largen, 100);
+                }
+
+            function largen() {
+                document.getElementById("sparty").style.width="256px";
+                document.getElementById("sparty").style.height="256px";
+            
+                bell_sound();
             }
 
             function BuyWells() {
@@ -63,6 +77,7 @@
                     wells = wells+1;
                     wellsCost = Math.round(wellsCost*1.15);
 
+                    money_sound();
                     document.getElementById("score").innerHTML = score;
                     document.getElementById("wellscost").innerHTML = wellsCost;
                     document.getElementById("wells").innerHTML = wells;
@@ -76,6 +91,7 @@
                     footballs = footballs+1;
                     footballCost = Math.round(footballCost*1.15);
 
+                    money_sound();
                     document.getElementById("score").innerHTML = score;
                     document.getElementById("footballcost").innerHTML = footballCost;
                     document.getElementById("footballs").innerHTML = footballs;
@@ -90,7 +106,18 @@
                 
             }, 1000);
 
-            
+            function money_sound(){
+                var snd = new Audio('cha-ching.mp3');
+                snd.play();
+            }
+            function badass_sound(){
+                var snd = new Audio('certified-badass.mp3');
+                snd.play();
+            }
+            function bell_sound(){
+                var snd = new Audio('bell-ding.mp3');
+                snd.play();
+            }
         </script>
     </body>
 <HTML>
