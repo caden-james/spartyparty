@@ -70,7 +70,6 @@
             outline: 5px solid black;
             position: absolute;
         }
-        
 
         .button3 {
           border: none;
@@ -112,6 +111,22 @@
         .whitething {
             color:white;
         }
+        .button5 {
+          border: none;
+          color: rgb(25, 103, 15);
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+          outline: 5px solid rgb(25, 103, 15);
+        }
     </style>
 
     <body>
@@ -123,20 +138,17 @@
         <button class= button2 onclick="BuyFootball()">The Entire MSU Football Team [<span id='footballcost'>100</span>] -- <span id='footballs'>0</span></button>
         <button class= button3 onclick="BuyZeke()">Zeke The Wonderdog [<span id='zekecost'>500</span>] -- <span id='zekes'>0</span></button>
         <button class= button4 onclick="BuyIzzo()">MVP Steven Izzo [<span id='izzocost'>1000</span>] -- <span id='izzos'>0</span></button>
-        
+        <button class= button5 onclick="BuyCombo()">Sparty's Special Combo [<span id='combocost'>1000</span>] -- <span id='combos'>0</span></button>
         <p class="codeconduct">SPARTAN CODE OF CONDUCT!!!!</p>
-        <p class="whitething"> We will perform our responsibilities ethically, honestly, with integrity, and otherwise in compliance with University policies and applicable law.
-            We will dedicate the time and effort needed to responsibly and capably perform our duties as members of the governing body of the institution and thoroughly prepare for, regularly attend, and actively participate in board meetings and committee meetings.
-            We will avoid conflicts of interest and appearances of impropriety, and otherwise conduct ourselves in a manner that conforms with the Board of Trustees Conflict of Interest Policy.
-            We will not accept special benefits or anything of value for ourselves or others in consideration of  performing our duties as a Trustee, other than approved University resources and courtesies and the reimbursement of authorized expenses.
-            We will exercise responsible stewardship, uphold our fiduciary duties to the University and the State of Michigan, and ensure necessary and proper controls safeguarding public resources and the integrity of University business are in place and observed, with periodic auditing by the Office of Audit, Risk and Compliance, reporting directly to the Trustee Committee on Audit, Risk and Compliance.
-            We will maintain and respect the confidentiality of University records and information, including personnel information and student records; will not disclose nonpublic information, including privileged attorney/client communications, without proper authorization; and will not misuse or exploit for personal benefit any records or information to which we obtain special access as a result of our position.
-            We will uphold our role as the supervisory and policymaking body of the institution; properly elect, support, and evaluate the President; and avoid involvement in administrative matters not subject to the direct authority of the Board.
-            We will support open communication, transparency, and the free expression of ideas and will not condone any form of deceit, incivility, intimidation, silencing, or retaliation.
-            We will communicate through the President, Secretary of the Board of Trustees, or other administrator designated by the President when conducting official University business, as contemplated by the Bylaws of the Board of Trustees.
-            We will support the Chairperson of the Board of Trustees and their designee as the source of official communications and statements to the University community and the media on behalf of the Board.
-            We will think independently and make informed decisions based on what is in the best interests of the institution and the advancement of higher education, yet support the majority decision of the Board and work cooperatively with fellow Board members and the Administration to advance the goals of the institution.
-            We will commit ourselves to the principles of federal and state law guaranteeing equal opportunity and nondiscrimination; support an environment that respects the rights and opinions of all people; and ensure complaints of discrimination, harassment, and retaliation are properly investigated and addressed in accordance with University policy and applicable law.</p>
+        <p class="whitething"> , and otherwiesignee as the source of offielves in a manner that conunication, transparency, and the Wairperson of the Boe will perform our responsibilities ethically, honestly, with integrity, and otherwise in compliance with University policies and applicable law.
+            s contemplated by the Bylaws of the Board of Trustees. We wverning body of the institution and thoroughly prepare for, regularly attend, and actively participate in board meetings and committee meetings.
+            We will avoid conflicts of ie will think it, incivility, intimidation, silencing, or retaliation. independentlthing of value for ourselves or others in consideration of  perforthrouity of University recWe will maintain and respnd wiords and informacial communications and statements to the University community and the media on behalf of the Board.
+            We as members of the gocting official University businessfits or anys to the prir designated by the Presse conduct ourstion, including personnel information and student records; will not disclose nonpublic information, including privileged attorney/client communications, without proper authorization; and will not misuse or exploit for personal benefit any records or information to which we obtain special access as a result of our position.
+            We wming our duties as a Trustee, other than approved Ud our role ecretary of the Board of Trust, ay form of deceWe will communicatee wilnterest and appearances of improprietyfree eect the confidentialxpression of ideas agh the President, Sour fiduciary dutiey and make informed decisions based on what is in the best interests of the institution and the advancement of higher education, yet support the majority decision of the Board and work cooperatively with fellow Board members and the Administration to advance the goals of the institution.
+            niversity resources and courtesies and the reimbursement of authorized expenses.gan, and ensure necessary and proper controls safeguarding public resources and the integrity of University business are in place and observed, with periodic auditing by the Office of Audit, Risk and Compliance, reporting directly to the Trustee Committee on Audit, Risk and Compliance.
+            ll not condone anWe will dedicate the time and effort needed to responsibforms with the Board of Trustees Conflict of Interest Policy.
+            Wl exercise responsible stewardship, uphold as dnthe supervisory and policymaking body of the institution; properly elect, support, and evaluate the President; and avoid involvement in administrative matters not subject to the direct authority of the Board.
+            Wes will not accept special beneees, or oe will support opWbly perform our dutither ad the University and the State of Michien commly and capa ill upholWe will commit ourselves toministratoident when conduill support the Chard of Trustees and their ciples of federal and state law guaranteeing equal opportunity and nondiscrimination; support an environment that respects the rights and opinions of all people; and ensure complaints of discrimination, harassment, and retaliation are properly investigated and addressed in accordance with University policy and applicable law.</p>
             <script>
             var score = 0;
 
@@ -146,8 +158,10 @@
             var footballs = 0;
             var zekeCost = 500;
             var zekes = 0;
-            var izzoCost = 1000;
+            var izzoCost = 1000;s
             var izzos = 0;
+            var comboCost = 10000;
+            var combos = 0;
             function myfunc(amount) {
                 score = score+amount;
                 document.getElementById("score").innerHTML = score;
@@ -219,14 +233,32 @@
                     document.getElementById("izzos").innerHTML = izzos;
                 }
             }
+            function BuyCombo() {
+                if (score >= comboCost) {
+                    score = score-comboCost;
+                    combos = combos+1;
+                    comboCost = Math.round(comboCost*1.15);
+
+                    basketball_sound();
+                    document.getElementById("score").innerHTML = score;
+                    document.getElementById("combocost").innerHTML = comboCost;
+                    document.getElementById("combos").innerHTML = combos;
+                }
+            }
             setInterval (function() {
                 score = score + wells;
                 score = score + (footballs * 12);
                 score = score + (zekes * 35);
                 score = score + (izzos*50);
+                score = score + (combos*100);
                 document.getElementById("score").innerHTML = score;
                 
             }, 1000);
+
+            setInterval (function() {
+                var snd = new Audio('lowbatteryfirealarm.mp3');
+                snd.play();
+            }, 30000);
 
             function money_sound(){
                 var snd = new Audio('cha-ching.mp3');
@@ -246,6 +278,10 @@
             }
             function basketball_sound(){
                 var snd = new Audio('scored-basket.mp3');
+                snd.play();
+            }
+            function choir_sound(){
+                var snd = new Audio('short-choir.mp3');
                 snd.play();
             }
         </script>
