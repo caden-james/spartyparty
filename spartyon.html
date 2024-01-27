@@ -23,6 +23,7 @@
             margin-left: auto;
             margin-right: auto;
             width: 50%;
+            outline: 5px solid rgb(25, 103, 15);
         }
         .button2 {
           border: none;
@@ -38,6 +39,7 @@
             margin-left: auto;
             margin-right: auto;
             width: 50%;
+            outline: 5px solid rgb(25, 103, 15);
         }
         body {    
             background-image: url('msu.webp');
@@ -57,15 +59,33 @@
             background-color:darkgreen;
             margin-left: 400px;
             margin-right: 400px;
+            outline: 5px solid black;
         }
         .spartan {
             display: block;
             margin-left: auto;
             margin-right: auto;
             width: 50%;
+            outline: 5px solid black;
         }
 
         .button3 {
+          border: none;
+          color: rgb(25, 103, 15);
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+          outline: 5px solid rgb(25, 103, 15);
+        }
+        .button4 {
           border: none;
           color: rgb(25, 103, 15);
           padding: 15px 32px;
@@ -98,6 +118,7 @@
         <button class= button onclick="BuyWells()">Wells Hall [<span id='wellscost'>15</span>] -- <span id='wells'>0</span></button>
         <button class= button2 onclick="BuyFootball()">The Entire MSU Football Team [<span id='footballcost'>100</span>] -- <span id='footballs'>0</span></button>
         <button class= button3 onclick="BuyZeke()">Zeke The Wonderdog [<span id='zekecost'>500</span>] -- <span id='zekes'>0</span></button>
+        <button class= button4 onclick="BuyIzzo()">MVP Steven Izzo [<span id='izzocost'>1000</span>] -- <span id='izzos'>0</span></button>
         
         <p class="codeconduct">SPARTAN CODE OF CONDUCT!!!!</p>
         <p class="whitething"> We will perform our responsibilities ethically, honestly, with integrity, and otherwise in compliance with University policies and applicable law.
@@ -112,7 +133,7 @@
             We will support the Chairperson of the Board of Trustees and their designee as the source of official communications and statements to the University community and the media on behalf of the Board.
             We will think independently and make informed decisions based on what is in the best interests of the institution and the advancement of higher education, yet support the majority decision of the Board and work cooperatively with fellow Board members and the Administration to advance the goals of the institution.
             We will commit ourselves to the principles of federal and state law guaranteeing equal opportunity and nondiscrimination; support an environment that respects the rights and opinions of all people; and ensure complaints of discrimination, harassment, and retaliation are properly investigated and addressed in accordance with University policy and applicable law.</p>
-        <script>
+            <script>
             var score = 0;
 
             var wellsCost = 15;
@@ -121,7 +142,8 @@
             var footballs = 0;
             var zekeCost = 500;
             var zekes = 0;
-
+            var izzoCost = 1000;
+            var izzos = 0;
             function myfunc(amount) {
                 score = score+amount;
                 document.getElementById("score").innerHTML = score;
@@ -181,11 +203,23 @@
                     document.getElementById("zekes").innerHTML = zekes;
                 }
             }
+            function BuyIzzo() {
+                if (score >= izzoCost) {
+                    score = score-izzoCost;
+                    izzos = izzos+1;
+                    izzoCost = Math.round(izzoCost*1.15);
 
+                    basketball_sound();
+                    document.getElementById("score").innerHTML = score;
+                    document.getElementById("izzocost").innerHTML = izzoCost;
+                    document.getElementById("izzos").innerHTML = izzos;
+                }
+            }
             setInterval (function() {
                 score = score + wells;
                 score = score + (footballs * 12);
-                score = score + (zekes * 35)
+                score = score + (zekes * 35);
+                score = score + (izzos*50);
                 document.getElementById("score").innerHTML = score;
                 
             }, 1000);
@@ -204,6 +238,10 @@
             }
             function dog_sound(){
                 var snd = new Audio('dog_barking.mp3');
+                snd.play();
+            }
+            function basketball_sound(){
+                var snd = new Audio('scored-basket.mp3');
                 snd.play();
             }
         </script>
