@@ -64,6 +64,7 @@
         }
         .spartan {
             display: block;
+            align-items: center;
             margin-left: 41%;
             margin-right: 50%;
             outline: 5px solid black;
@@ -115,7 +116,7 @@
 
     <body>
         <p class="funnyfont">Sparty Cash: <span id="score">0</span></p>
-        <img class= "spartan" id="sparty" src="sparty on.png" height="256px" width="256px" \ onclick="myfunc(1)" >
+        <img class= "spartan" id="sparty" src="sparty on.png" height="256px" width="256px" onclick="myfunc(1)" >
         <img id="splittersparty" src="spartyhittinit.gif" height="100px" width="100px">
         <img id="wellshall" height="100px" width="100px">
         <button class= button onclick="BuyWells()">Wells Hall [<span id='wellscost'>15</span>] -- <span id='wells'>0</span></button>
@@ -156,13 +157,13 @@
             function smallen() {
                 document.getElementById("sparty").style.width="222px";
                 document.getElementById("sparty").style.height="222px";
+                document.getElementById("sparty").style.alignItems
                 setTimeout(largen, 100);
                 }
 
             function largen() {
                 document.getElementById("sparty").style.width="256px";
                 document.getElementById("sparty").style.height="256px";
-            
                 bell_sound();
             }
 
