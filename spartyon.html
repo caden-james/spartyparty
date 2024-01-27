@@ -4,13 +4,17 @@
     </head>
 
     <body>
-        <p>Score: <span id="score">0</span></p>
+        <p>Sparty Cash: <span id="score">0</span></p>
         <img src="sparty on.png" height="256px" width="256px" onclick="myFunction(1)">
         <button onclick="BuyWells()">Wells Hall [<span id='wellscost'>15</span>] -- <span id='wells'>0</span></button>
+        <button onclick="BuyFootball()">The Entire MSU Football Team [<span id='wellscost'>100</span>] -- <span id='football'>0</span></button>
         <script>
             var score = 0;
+
             var wellsCost = 15;
             var wells = 0;
+            var footballCost = 100;
+            var football = 0;
 
             function myFunction(amount) {
                 score = score+amount;
@@ -27,10 +31,25 @@
                     document.getElementById("wellscost").innerHTML = wellsCost;
                     document.getElementById("wells").innerHTML = wells;
                 }
+
             }
+
+            function BuyFootball() {
+                if (score >= footballCost) {
+                    score = score-footballCost;
+                    football = football+1;
+                    footballCost = Math.round(footballCost*1.15);
+
+                    document.getElementById("score").innerHTML = score;
+                    document.getElementById("wellscost").innerHTML = footballCost;
+                    document.getElementById("wells").innerHTML = football;
+                }
+            }
+
 
             setInterval (function() {
                 score = score + wells;
+                score = score + (football * 20);
                 document.getElementById("score").innerHTML = score;
                 
             }, 1000);
