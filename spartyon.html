@@ -41,6 +41,7 @@
             margin-right: auto;
             width: 50%;
             outline: 5px solid rgb(25, 103, 15);
+            margin-top: 15px;
         }
         body {    
             background-image: url('msu.webp');
@@ -64,6 +65,7 @@
         }
         .spartan {
             display: block;
+            align-items: center;
             margin-left: 41%;
             margin-right: 50%;
             outline: 5px solid black;
@@ -85,6 +87,7 @@
           margin-right: auto;
           width: 50%;
           outline: 5px solid rgb(25, 103, 15);
+          margin-top: 15px;
         }
         .button4 {
           border: none;
@@ -101,6 +104,7 @@
           margin-right: auto;
           width: 50%;
           outline: 5px solid rgb(25, 103, 15);
+          margin-top: 15px;
         }
         .codeconduct {
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -125,12 +129,13 @@
           margin-right: auto;
           width: 50%;
           outline: 5px solid rgb(25, 103, 15);
+          margin-top: 15px;
         }
     </style>
 
     <body>
         <p class="funnyfont">Sparty Cash: <span id="score">0</span></p>
-        <img class= "spartan" id="sparty" src="sparty on.png" height="256px" width="256px" \ onclick="myfunc(1)" >
+        <img class= "spartan" id="sparty" src="sparty on.png" height="256px" width="256px" onclick="myfunc(1)" >
         <img id="splittersparty" src="spartyhittinit.gif" height="100px" width="100px">
         <img id="wellshall" height="100px" width="100px">
         <img id="zeke" height="100px" width="100px">
@@ -138,7 +143,7 @@
         <button class= button2 onclick="BuyFootball()">The Entire MSU Football Team [<span id='footballcost'>100</span>] -- <span id='footballs'>0</span></button>
         <button class= button3 onclick="BuyZeke()">Zeke The Wonderdog [<span id='zekecost'>500</span>] -- <span id='zekes'>0</span></button>
         <button class= button4 onclick="BuyIzzo()">MVP Steven Izzo [<span id='izzocost'>1000</span>] -- <span id='izzos'>0</span></button>
-        <button class= button5 onclick="BuyCombo()">Sparty's Special Combo [<span id='combocost'>1000</span>] -- <span id='combos'>0</span></button>
+        <button class= button5 onclick="BuyCombo()">Sparty's Special Combo [<span id='combocost'>10000</span>] -- <span id='combos'>0</span></button>
         <p class="codeconduct">SPARTAN CODE OF CONDUCT!!!!</p>
         <p class="whitething"> , and otherwiesignee as the source of offielves in a manner that conunication, transparency, and the Wairperson of the Boe will perform our responsibilities ethically, honestly, with integrity, and otherwise in compliance with University policies and applicable law.
             s contemplated by the Bylaws of the Board of Trustees. We wverning body of the institution and thoroughly prepare for, regularly attend, and actively participate in board meetings and committee meetings.
@@ -158,7 +163,7 @@
             var footballs = 0;
             var zekeCost = 500;
             var zekes = 0;
-            var izzoCost = 1000;s
+            var izzoCost = 1000;
             var izzos = 0;
             var comboCost = 10000;
             var combos = 0;
@@ -171,13 +176,13 @@
             function smallen() {
                 document.getElementById("sparty").style.width="222px";
                 document.getElementById("sparty").style.height="222px";
+                document.getElementById("sparty").style.alignItems
                 setTimeout(largen, 100);
-                }
+            }
 
             function largen() {
                 document.getElementById("sparty").style.width="256px";
                 document.getElementById("sparty").style.height="256px";
-            
                 bell_sound();
             }
 
