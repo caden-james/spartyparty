@@ -20,7 +20,7 @@
           margin: 4px 2px;
           cursor: pointer;
           position: absolute;
-          right: 100px;
+          right: 180px;
           bottom: 250px;
         }
         .button2 {
@@ -42,13 +42,20 @@
         }
         .funnyfont {
             color: rgb(255, 255, 255);
+            position: fixed;
+            left: 280px;
+        }
+        .spartan {
+            position: fixed;
+            right: 160px;
+            bottom: 340px;
         }
 
     </style>
 
     <body>
         <p class="funnyfont">Sparty Cash: <span id="score">0</span></p>
-        <img id="sparty" src="sparty on.png" height="256px" width="256px" onclick="myfunc(1)">
+        <img class= "spartan" id="sparty" src="sparty on.png" height="256px" width="256px" \ onclick="myfunc(1)" >
         <button class= button onclick="BuyWells()">Wells Hall [<span id='wellscost'>15</span>] -- <span id='wells'>0</span></button>
         <button class= button2 onclick="BuyFootball()">The Entire MSU Football Team [<span id='footballcost'>100</span>] -- <span id='footballs'>0</span></button>
         <script>
