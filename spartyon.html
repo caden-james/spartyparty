@@ -9,7 +9,7 @@
 
     <body>
         <p>Sparty Cash: <span id="score">0</span></p>
-        <img id="sparty" src="sparty on.png" height="256px" width="256px" onclick="myFunction(1)">
+        <img src="sparty on.png" height="256px" width="256px" onclick="myFunction(1)">
         <button onclick="BuyWells()">Wells Hall [<span id='wellscost'>15</span>] -- <span id='wells'>0</span></button>
         <button onclick="BuyFootball()">The Entire MSU Football Team [<span id='footballcost'>100</span>] -- <span id='footballs'>0</span></button>
         <script>
@@ -23,8 +23,6 @@
             function myFunction(amount) {
                 score = score+amount;
                 document.getElementById("score").innerHTML = score;
-                document.getElementById("sparty").height="256px";
-                document.getElementById("sparty").width="256px";
             }
 
             function BuyWells() {
@@ -33,6 +31,7 @@
                     wells = wells+1;
                     wellsCost = Math.round(wellsCost*1.15);
 
+                    money_sound();
                     document.getElementById("score").innerHTML = score;
                     document.getElementById("wellscost").innerHTML = wellsCost;
                     document.getElementById("wells").innerHTML = wells;
@@ -46,6 +45,7 @@
                     footballs = footballs+1;
                     footballCost = Math.round(footballCost*1.15);
 
+                    money_sound();
                     document.getElementById("score").innerHTML = score;
                     document.getElementById("footballcost").innerHTML = footballCost;
                     document.getElementById("footballs").innerHTML = footballs;
@@ -60,6 +60,14 @@
                 
             }, 1000);
 
+            function money_sound(){
+                var snd = new Audio('cha-ching.mp3');
+                snd.play();
+            }
+            function badass_sound(){
+                var snd = new Audio('certified-badass.mp3');
+                snd.play();
+            }
             
         </script>
     </body>
