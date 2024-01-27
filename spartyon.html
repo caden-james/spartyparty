@@ -140,6 +140,7 @@
         <img id="wellshall" height="100px" width="100px">
         <img id="sparty-football" height="100px" width="100px">
         <img id="zeke" height="100px" width="100px">
+        <img id="steven" height="100px" width="100px">
         <img id="combopic" height="100px" width="100px">
         <button class= button onclick="BuyWells()">Wells Hall [<span id='wellscost'>15</span>] -- <span id='wells'>0</span></button>
         <button class= button2 onclick="BuyFootball()">The Entire MSU Football Team [<span id='footballcost'>100</span>] -- <span id='footballs'>0</span></button>
@@ -235,6 +236,7 @@
                     score = score-izzoCost;
                     izzos = izzos+1;
                     izzoCost = Math.round(izzoCost*1.15);
+                    document.getElementById("steven").src="steven.jpg";
 
                     basketball_sound();
                     document.getElementById("score").innerHTML = score;
