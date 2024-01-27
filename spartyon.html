@@ -79,6 +79,21 @@
           margin-right: auto;
           width: 50%;
         }
+        .button4 {
+          border: none;
+          color: rgb(25, 103, 15);
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+        }
     </style>
 
     <body>
@@ -89,6 +104,7 @@
         <button class= button onclick="BuyWells()">Wells Hall [<span id='wellscost'>15</span>] -- <span id='wells'>0</span></button>
         <button class= button2 onclick="BuyFootball()">The Entire MSU Football Team [<span id='footballcost'>100</span>] -- <span id='footballs'>0</span></button>
         <button class= button3 onclick="BuyZeke()">Zeke The Wonderdog [<span id='zekecost'>500</span>] -- <span id='zekes'>0</span></button>
+        <button class= button4 onclick="BuyIzzo()">MVP Steven Izzo [<span id='izzocost'>1000</span>] -- <span id='izzos'>0</span></button>
         <script>
             var score = 0;
 
@@ -98,7 +114,8 @@
             var footballs = 0;
             var zekeCost = 500;
             var zekes = 0;
-
+            var izzoCost = 1000;
+            var izzos = 0;
             function myfunc(amount) {
                 score = score+amount;
                 document.getElementById("score").innerHTML = score;
@@ -158,11 +175,23 @@
                     document.getElementById("zekes").innerHTML = zekes;
                 }
             }
+            function BuyIzzo() {
+                if (score >= izzoCost) {
+                    score = score-izzoCost;
+                    izzos = izzos+1;
+                    izzoCost = Math.round(izzoCost*1.15);
 
+                    basketball_sound();
+                    document.getElementById("score").innerHTML = score;
+                    document.getElementById("izzocost").innerHTML = izzoCost;
+                    document.getElementById("izzos").innerHTML = izzos;
+                }
+            }
             setInterval (function() {
                 score = score + wells;
                 score = score + (footballs * 12);
-                score = score + (zekes * 35)
+                score = score + (zekes * 35);
+                score = score + (izzos*50);
                 document.getElementById("score").innerHTML = score;
                 
             }, 1000);
@@ -181,6 +210,10 @@
             }
             function dog_sound(){
                 var snd = new Audio('dog_barking.mp3');
+                snd.play();
+            }
+            function basketball_sound(){
+                var snd = new Audio('scored-basket.mp3');
                 snd.play();
             }
         </script>
