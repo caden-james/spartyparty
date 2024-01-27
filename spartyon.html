@@ -138,7 +138,10 @@
         <img class= "spartan" id="sparty" src="sparty on.png" height="256px" width="256px" onclick="myfunc(1)" >
         <img id="splittersparty" src="spartyhittinit.gif" height="100px" width="100px">
         <img id="wellshall" height="100px" width="100px">
+        <img id="sparty-football" height="100px" width="100px">
         <img id="zeke" height="100px" width="100px">
+        <img id="steven" height="100px" width="100px">
+        <img id="combopic" height="100px" width="100px">
         <button class= button onclick="BuyWells()">Wells Hall [<span id='wellscost'>15</span>] -- <span id='wells'>0</span></button>
         <button class= button2 onclick="BuyFootball()">The Entire MSU Football Team [<span id='footballcost'>100</span>] -- <span id='footballs'>0</span></button>
         <button class= button3 onclick="BuyZeke()">Zeke The Wonderdog [<span id='zekecost'>500</span>] -- <span id='zekes'>0</span></button>
@@ -206,6 +209,7 @@
                     score = score-footballCost;
                     footballs = footballs+1;
                     footballCost = Math.round(footballCost*1.15);
+                    document.getElementById("sparty-football").src="sparty-football.jpg";
 
                     badass_sound();
                     document.getElementById("score").innerHTML = score;
@@ -232,6 +236,7 @@
                     score = score-izzoCost;
                     izzos = izzos+1;
                     izzoCost = Math.round(izzoCost*1.15);
+                    document.getElementById("steven").src="steven.jpg";
 
                     basketball_sound();
                     document.getElementById("score").innerHTML = score;
@@ -244,6 +249,8 @@
                     score = score-comboCost;
                     combos = combos+1;
                     comboCost = Math.round(comboCost*1.15);
+                    document.getElementById("combopic").src="spartyscombo.gif";
+
 
                     choir_sound();
                     document.getElementById("score").innerHTML = score;
