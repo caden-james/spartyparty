@@ -133,6 +133,7 @@
         <img class= "spartan" id="sparty" src="sparty on.png" height="256px" width="256px" \ onclick="myfunc(1)" >
         <img id="splittersparty" src="spartyhittinit.gif" height="100px" width="100px">
         <img id="wellshall" height="100px" width="100px">
+        <img id="zeke" height="100px" width="100px">
         <button class= button onclick="BuyWells()">Wells Hall [<span id='wellscost'>15</span>] -- <span id='wells'>0</span></button>
         <button class= button2 onclick="BuyFootball()">The Entire MSU Football Team [<span id='footballcost'>100</span>] -- <span id='footballs'>0</span></button>
         <button class= button3 onclick="BuyZeke()">Zeke The Wonderdog [<span id='zekecost'>500</span>] -- <span id='zekes'>0</span></button>
@@ -213,6 +214,7 @@
                     score = score-zekeCost;
                     zekes = zekes+1;
                     zekeCost = Math.round(zekeCost*1.15);
+                    document.getElementById("zeke").src="zekethewonderdong.png";
 
                     dog_sound();
                     document.getElementById("score").innerHTML = score;
