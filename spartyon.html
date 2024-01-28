@@ -170,10 +170,16 @@
             var izzos = 0;
             var comboCost = 10000;
             var combos = 0;
+            var goal = false;
             function myfunc(amount) {
                 score = score+amount;
                 document.getElementById("score").innerHTML = score;
                 smallen();
+                if (score >= 100000 && goal == false){
+                    var snd = new Audio('congratulations-deep-voice.mp3');
+                    snd.play();
+                    goal = true;
+                }
             }
 
             function smallen() {
