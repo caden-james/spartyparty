@@ -195,6 +195,8 @@
             position: absolute;
             top: 600px;
             right: 20px;
+            background-color:rgb(28, 119, 48);
+            outline: 4px solid rgb(255, 255, 255);
         }
         
 
@@ -214,7 +216,7 @@
         <img class="spartygif" id="clownsparty" src="New Piskel.gif" height="125px" width="150px">
         <p class="laughsalot">LAUGH NOW PLEASE PLEASE LAUGH NOW</p>
         <img class="jeremey" id="jeremy" src="sparkle-on-jerma.gif" height="150px" width="120px">
-        <img class="win" id="sexysparty" src="sexy-sparty.jpg" height="200px" width="300px">
+        <img class="win" id="sexysparty" height="200px" width="300px">
         
         <button class= button onclick="BuyWells()">Wells Hall [<span id='wellscost'>15</span>] -- <span id='wells'>0</span></button>
         <button class= button2 onclick="BuyFootball()">The Entire MSU Football Team [<span id='footballcost'>100</span>] -- <span id='footballs'>0</span></button>
@@ -275,6 +277,7 @@
                 document.getElementById("combocost").innerHTML = comboCost;
                 document.getElementById("combos").innerHTML = combos;
                 document.getElementById("combopic").src="blank.png";
+                document.getElementById("sexysparty").src="blank.png";
             }
             function myfunc(amount) {
                 score = score+amount;
@@ -284,6 +287,7 @@
                     var snd = new Audio('congratulations-deep-voice.mp3');
                     snd.play();
                     goal = true;
+                    document.getElementById("sexysparty").src="sexy-sparty.jpg";
                 }
             }
 
