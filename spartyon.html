@@ -20,7 +20,7 @@
           margin: 4px 2px;
           cursor: pointer;
           display: block;
-          margin-top: 170px;
+          margin-top: 300px;
             margin-left: auto;
             margin-right: auto;
             width: 50%;
@@ -43,7 +43,8 @@
             outline: 5px solid rgb(25, 103, 15);
             margin-top: 15px;
         }
-        body {    
+        body {  
+              
             background-image: url('msu.webp');
             background-attachment: fixed; 
             background-size: cover;
@@ -130,18 +131,58 @@
           outline: 5px solid rgb(25, 103, 15);
           margin-top: 15px;
         }
+        .rewards {     
+            background-color:rgb(28, 119, 48);
+            outline: 4px solid rgb(255, 255, 255);
+            
+        }
+        .reward_one {
+            position: absolute;
+            left:100px;
+            
+        }
+        .reward_two {
+            position: absolute;
+            left:100px;
+            top:250px;
+        }
+        .reward_three {
+            position: absolute;
+            left:100px;
+            top:350px;
+        }
+        .reward_four {
+            position: absolute;
+            left:100px;
+            top:450px;
+        }
+        .reward_five {
+           position: absolute;
+            left:100px;
+            top:550px;
+        }
+        .reward_six {
+            position: absolute;
+            left:100px;
+            top:650px;
+            
+        }
+
+        
 
     </style>
 
     <body>
+        
         <p class="funnyfont">Sparty Cash: <span id="score">0</span></p>
-        <img class= "spartan" id="sparty" src="sparty on.png" height="256px" width="256px" onclick="myfunc(1)" >
-        <img id="splittersparty" src="spartyhittinit.gif" height="100px" width="100px">
-        <img id="wellshall" height="100px" width="100px">
-        <img id="sparty-football" height="100px" width="100px">
-        <img id="zeke" height="100px" width="100px">
-        <img id="steven" height="100px" width="100px">
-        <img id="combopic" height="100px" width="100px">
+        <img class= "spartan" id="sparty" src="spartyrevamped.png" height="256px" width="256px" onclick="myfunc(1)" >
+        <img class="rewards reward_one" id="splittersparty" src="spartyhittinit.gif" height="100px" width="100px">
+        <img class="rewards reward_two" id="wellshall" height="105px" width="105px">
+        <img class="rewards reward_three" id="sparty-football" height="105px" width="105px">
+        <img class="rewards reward_four" id="zeke" height="105px" width="105px">
+        <img class="rewards reward_five" id="steven" height="105px" width="105px">
+        <img class="rewards reward_six" id="combopic" height="105px" width="105px">
+        
         <button class= button onclick="BuyWells()">Wells Hall [<span id='wellscost'>15</span>] -- <span id='wells'>0</span></button>
         <button class= button2 onclick="BuyFootball()">The Entire MSU Football Team [<span id='footballcost'>100</span>] -- <span id='footballs'>0</span></button>
         <button class= button3 onclick="BuyZeke()">Zeke The Wonderdog [<span id='zekecost'>500</span>] -- <span id='zekes'>0</span></button>
@@ -170,13 +211,16 @@
             var izzos = 0;
             var comboCost = 10000;
             var combos = 0;
-            if (score >= 100000) {
-                
-            }
+            var goal = false;
             function myfunc(amount) {
                 score = score+amount;
                 document.getElementById("score").innerHTML = score;
                 smallen();
+                if (score >= 100000 && goal == false){
+                    var snd = new Audio('congratulations-deep-voice.mp3');
+                    snd.play();
+                    goal = true;
+                }
             }
 
             function smallen() {
