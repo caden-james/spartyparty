@@ -167,13 +167,20 @@
             top:650px;
             
         }
+        .loss_class {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            
+        }
 
         
 
     </style>
 
     <body>
-        
+        <button onclick="lossbutton()">loss button</button>
+        <p class="loss_class"><span id="initial_score">0</span></p>
         <p class="funnyfont">Sparty Cash: <span id="score">0</span></p>
         <img class= "spartan" id="sparty" src="spartyrevamped.png" height="256px" width="256px" onclick="myfunc(1)" >
         <img class="rewards reward_one" id="splittersparty" src="spartyhittinit.gif" height="100px" width="100px">
@@ -200,6 +207,7 @@
             Wes will not accept special beneees, or oe will support opWbly perform our dutither ad the University and the State of Michien commly and capa ill upholWe will commit ourselves toministratoident when conduill support the Chard of Trustees and their ciples of federal and state law guaranteeing equal opportunity and nondiscrimination; support an environment that respects the rights and opinions of all people; and ensure complaints of discrimination, harassment, and retaliation are properly investigated and addressed in accordance with University policy and applicable law.</p>
             <script>
             var score = 0;
+            var initial_score = 0;
 
             var wellsCost = 15;
             var wells = 0;
@@ -212,6 +220,10 @@
             var comboCost = 10000;
             var combos = 0;
             var goal = false;
+            function lossbutton() {
+                document.getElementById("initial_score").innerHTML = score;
+                score = 0;
+            }
             function myfunc(amount) {
                 score = score+amount;
                 document.getElementById("score").innerHTML = score;
