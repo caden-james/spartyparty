@@ -1,0 +1,420 @@
+<HTML>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="spartyoncss.css">
+        <title>Sparty Party</title>
+    </head>
+
+    <!-- styling for the button-->
+    <style> 
+        .button {
+          border: none;
+          color: rgb(25, 103, 15);
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+          display: block;
+          margin-top: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            outline: 5px solid rgb(25, 103, 15);
+        }
+        .button2 {
+          border: none;
+          color: rgb(25, 103, 15);
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+          display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            outline: 5px solid rgb(25, 103, 15);
+            margin-top: 15px;
+        }
+        body {  
+              
+            background-image: url('msu.webp');
+            background-attachment: fixed; 
+            background-size: cover;
+            
+        }
+        .funnyfont {
+            font-family: 'Courier New', Courier, monospace;
+            color: rgb(0, 0, 0);
+            font-size:30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 30px;
+            background-color:darkgreen;
+            margin-left: 400px;
+            margin-right: 400px;
+            outline: 5px solid black;
+        }
+        .spartan {
+            display: block;
+            margin-left: 41%;
+            margin-right: 50%;
+            outline: 5px solid black;
+            position: absolute;
+        }
+
+        .button3 {
+          border: none;
+          color: rgb(25, 103, 15);
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+          outline: 5px solid rgb(25, 103, 15);
+          margin-top: 15px;
+        }
+        .button4 {
+          border: none;
+          color: rgb(25, 103, 15);
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+          outline: 5px solid rgb(25, 103, 15);
+          margin-top: 15px;
+        }
+        .codeconduct {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: rgb(0, 0, 0);
+            font-size:50px;
+        }
+        .whitething {
+            color:white;
+        }
+        .button5 {
+          border: none;
+          color: rgb(25, 103, 15);
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+          outline: 5px solid rgb(25, 103, 15);
+          margin-top: 15px;
+        }
+        .rewards {     
+            background-color:rgb(28, 119, 48);
+            outline: 4px solid rgb(255, 255, 255);
+            
+        }
+        .reward_one {
+            position: absolute;
+            left:100px;
+            
+        }
+        .reward_two {
+            position: absolute;
+            left:100px;
+            top:250px;
+        }
+        .reward_three {
+            position: absolute;
+            left:100px;
+            top:350px;
+        }
+        .reward_four {
+            position: absolute;
+            left:100px;
+            top:450px;
+        }
+        .reward_five {
+           position: absolute;
+            left:100px;
+            top:550px;
+        }
+        .reward_six {
+            position: absolute;
+            left:100px;
+            top:650px;
+            
+        }
+        .loss_class {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            
+        }
+        .spartygif {
+            position: absolute;
+            top: 100px;
+            right: 0px;
+        }
+        .laughsalot {
+            position: absolute;
+            top: 225px;
+            right: 0px;
+            font-size: large;
+            color: rgb(255, 0, 0);
+            background-color:rgb(43, 255, 65);
+        }
+        .jeremey {
+            position: absolute;
+            top: 295px;
+            right: 80px;
+        }
+        .win {
+            position: absolute;
+            top: 550px;
+            right: 20px;
+            background-color:rgb(28, 119, 48);
+            outline: 4px solid rgb(255, 255, 255);
+        }
+        
+
+    </style>
+
+    <body>
+        <button onclick="lossbutton()">loss button</button>
+        <p class="loss_class"><span id="initial_score">0</span></p>
+        <p class="funnyfont">Sparty Cash: <span id="score">0</span></p>
+        <img class= "spartan" id="sparty" src="spartyrevamped.png" height="256px" width="256px" onclick="myfunc(1)" >
+        <img class="rewards reward_one" id="splittersparty" src="spartyhittinit.gif" height="100px" width="100px">
+        <img class="rewards reward_two" id="wellshall" height="105px" width="105px">
+        <img class="rewards reward_three" id="sparty-football" height="105px" width="105px">
+        <img class="rewards reward_four" id="zeke" height="105px" width="105px">
+        <img class="rewards reward_five" id="steven" height="105px" width="105px">
+        <img class="rewards reward_six" id="combopic" height="105px" width="105px">
+        <img class="spartygif" id="clownsparty" src="New Piskel.gif" height="125px" width="150px">
+        <p class="laughsalot">LAUGH NOW PLEASE PLEASE LAUGH NOW</p>
+        <img class="jeremey" id="jeremy" src="sparkle-on-jerma.gif" height="150px" width="120px">
+        <img class="win" id="sexysparty" height="200px" width="300px">
+        
+        <button class= button onclick="BuyWells()">Wells Hall [<span id='wellscost'>15</span>] -- <span id='wells'>0</span></button>
+        <button class= button2 onclick="BuyFootball()">The Entire MSU Football Team [<span id='footballcost'>100</span>] -- <span id='footballs'>0</span></button>
+        <button class= button3 onclick="BuyZeke()">Zeke The Wonderdog [<span id='zekecost'>500</span>] -- <span id='zekes'>0</span></button>
+        <button class= button4 onclick="BuyIzzo()">MVP Steven Izzo [<span id='izzocost'>1000</span>] -- <span id='izzos'>0</span></button>
+        <button class= button5 onclick="BuyCombo()">Sparty's Special Combo [<span id='combocost'>10000</span>] -- <span id='combos'>0</span></button>
+        <p class="codeconduct">SPARTAN CODE OF CONDUCT!!!!</p>
+        <p class="whitething"> , and otherwiesignee as the source of offielves in a manner that conunication, transparency, and the Wairperson of the Boe will perform our responsibilities ethically, honestly, with integrity, and otherwise in compliance with University policies and applicable law.
+            s contemplated by the Bylaws of the Board of Trustees. We wverning body of the institution and thoroughly prepare for, regularly attend, and actively participate in board meetings and committee meetings.
+            We will avoid conflicts of ie will think it, incivility, intimidation, silencing, or retaliation. independentlthing of value for ourselves or others in consideration of  perforthrouity of University recWe will maintain and respnd wiords and informacial communications and statements to the University community and the media on behalf of the Board.
+            We as members of the gocting official University businessfits or anys to the prir designated by the Presse conduct ourstion, including personnel information and student records; will not disclose nonpublic information, including privileged attorney/client communications, without proper authorization; and will not misuse or exploit for personal benefit any records or information to which we obtain special access as a result of our position.
+            We wming our duties as a Trustee, other than approved Ud our role ecretary of the Board of Trust, ay form of deceWe will communicatee wilnterest and appearances of improprietyfree eect the confidentialxpression of ideas agh the President, Sour fiduciary dutiey and make informed decisions based on what is in the best interests of the institution and the advancement of higher education, yet support the majority decision of the Board and work cooperatively with fellow Board members and the Administration to advance the goals of the institution.
+            niversity resources and courtesies and the reimbursement of authorized expenses.gan, and ensure necessary and proper controls safeguarding public resources and the integrity of University business are in place and observed, with periodic auditing by the Office of Audit, Risk and Compliance, reporting directly to the Trustee Committee on Audit, Risk and Compliance.
+            ll not condone anWe will dedicate the time and effort needed to responsibforms with the Board of Trustees Conflict of Interest Policy.
+            Wl exercise responsible stewardship, uphold as dnthe supervisory and policymaking body of the institution; properly elect, support, and evaluate the President; and avoid involvement in administrative matters not subject to the direct authority of the Board.
+            Wes will not accept special beneees, or oe will support opWbly perform our dutither ad the University and the State of Michien commly and capa ill upholWe will commit ourselves toministratoident when conduill support the Chard of Trustees and their ciples of federal and state law guaranteeing equal opportunity and nondiscrimination; support an environment that respects the rights and opinions of all people; and ensure complaints of discrimination, harassment, and retaliation are properly investigated and addressed in accordance with University policy and applicable law.</p>
+            <script>
+            var score = 0;
+            var initial_score = 0;
+
+            var wellsCost = 15;
+            var wells = 0;
+            var footballCost = 100;
+            var footballs = 0;
+            var zekeCost = 500;
+            var zekes = 0;
+            var izzoCost = 1000;
+            var izzos = 0;
+            var comboCost = 10000;
+            var combos = 0;
+            var goal = false;
+            function lossbutton() {
+                document.getElementById("initial_score").innerHTML = score;
+                score = 0;
+                wellsCost = 15;
+                wells = 0;
+                footballCost = 100;
+                footballs = 0;
+                zekeCost = 500;
+                zekes = 0;
+                izzoCost = 1000;
+                izzos = 0;
+                comboCost = 10000;
+                combos = 0;
+                goal = false;
+                document.getElementById("wellscost").innerHTML = wellsCost;
+                document.getElementById("wells").innerHTML = wells;
+                document.getElementById("wellshall").src="blank.png";
+                document.getElementById("footballcost").innerHTML = footballCost;
+                document.getElementById("footballs").innerHTML = footballs;
+                document.getElementById("sparty-football").src="blank.png";
+                document.getElementById("zekecost").innerHTML = zekeCost;
+                document.getElementById("zekes").innerHTML = zekes;
+                document.getElementById("zeke").src="blank.png";
+                document.getElementById("izzocost").innerHTML = izzoCost;
+                document.getElementById("izzos").innerHTML = izzos;
+                document.getElementById("steven").src="blank.png";
+                document.getElementById("combocost").innerHTML = comboCost;
+                document.getElementById("combos").innerHTML = combos;
+                document.getElementById("combopic").src="blank.png";
+                document.getElementById("sexysparty").src="blank.png";
+            }
+            function myfunc(amount) {
+                score = score+amount;
+                document.getElementById("score").innerHTML = score;
+                smallen();
+                if (score >= 100000 && goal == false){
+                    var snd = new Audio('congratulations-deep-voice.mp3');
+                    snd.play();
+                    goal = true;
+                    document.getElementById("sexysparty").src="sexy-sparty.jpg";
+                }
+            }
+
+            function smallen() {
+                document.getElementById("sparty").style.width="222px";
+                document.getElementById("sparty").style.height="222px";
+                setTimeout(largen, 100);
+            }
+
+            function largen() {
+                document.getElementById("sparty").style.width="256px";
+                document.getElementById("sparty").style.height="256px";
+                bell_sound();
+            }
+
+            function BuyWells() {
+                if (score >= wellsCost) {
+                    score = score-wellsCost;
+                    wells = wells+1;
+                    wellsCost = Math.round(wellsCost*1.15);
+                    document.getElementById("wellshall").src="wells hall.jpg";
+
+                    money_sound();
+                    document.getElementById("score").innerHTML = score;
+                    document.getElementById("wellscost").innerHTML = wellsCost;
+                    document.getElementById("wells").innerHTML = wells;
+                }
+
+            }
+
+            function BuyFootball() {
+                if (score >= footballCost) {
+                    score = score-footballCost;
+                    footballs = footballs+1;
+                    footballCost = Math.round(footballCost*1.15);
+                    document.getElementById("sparty-football").src="sparty-football.jpg";
+
+                    badass_sound();
+                    document.getElementById("score").innerHTML = score;
+                    document.getElementById("footballcost").innerHTML = footballCost;
+                    document.getElementById("footballs").innerHTML = footballs;
+                }
+            }
+            
+            function BuyZeke() {
+                if (score >= zekeCost) {
+                    score = score-zekeCost;
+                    zekes = zekes+1;
+                    zekeCost = Math.round(zekeCost*1.15);
+                    document.getElementById("zeke").src="zekethewonderdog.png";
+
+                    dog_sound();
+                    document.getElementById("score").innerHTML = score;
+                    document.getElementById("zekecost").innerHTML = zekeCost;
+                    document.getElementById("zekes").innerHTML = zekes;
+                }
+            }
+            function BuyIzzo() {
+                if (score >= izzoCost) {
+                    score = score-izzoCost;
+                    izzos = izzos+1;
+                    izzoCost = Math.round(izzoCost*1.15);
+                    document.getElementById("steven").src="steven.jpg";
+
+                    basketball_sound();
+                    document.getElementById("score").innerHTML = score;
+                    document.getElementById("izzocost").innerHTML = izzoCost;
+                    document.getElementById("izzos").innerHTML = izzos;
+                }
+            }
+            function BuyCombo() {
+                if (score >= comboCost) {
+                    score = score-comboCost;
+                    combos = combos+1;
+                    comboCost = Math.round(comboCost*1.15);
+                    document.getElementById("combopic").src="spartyscombo.gif";
+
+
+                    choir_sound();
+                    document.getElementById("score").innerHTML = score;
+                    document.getElementById("combocost").innerHTML = comboCost;
+                    document.getElementById("combos").innerHTML = combos;
+                }
+            }
+            setInterval (function() {
+                score = score + wells;
+                score = score + (footballs * 12);
+                score = score + (zekes * 35);
+                score = score + (izzos*50);
+                score = score + (combos*100);
+                document.getElementById("score").innerHTML = score;
+                
+            }, 1000);
+
+            setInterval (function() {
+                var snd = new Audio('lowbatteryfirealarm.mp3');
+                var a = Math.floor(Math.random() * 10);
+                if (a<3) {
+                    
+                    snd.play();
+                }
+            }, 60000);
+
+            function money_sound(){
+                var snd = new Audio('cha-ching.mp3');
+                snd.play();
+            }
+            function badass_sound(){
+                var snd = new Audio('certified-badass.mp3');
+                snd.play();
+            }
+            function bell_sound(){
+                var snd = new Audio('bell-ding.mp3');
+                snd.play();
+            }
+            function dog_sound(){
+                var snd = new Audio('dog_barking.mp3');
+                snd.play();
+            }
+            function basketball_sound(){
+                var snd = new Audio('scored-basket.mp3');
+                snd.play();
+            }
+            function choir_sound(){
+                var snd = new Audio('short-choir.mp3');
+                snd.play();
+            }
+        </script>
+    </body>
+<HTML>
