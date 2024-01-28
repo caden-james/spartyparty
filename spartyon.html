@@ -238,6 +238,27 @@
             function lossbutton() {
                 document.getElementById("initial_score").innerHTML = score;
                 score = 0;
+                wellsCost = 15;
+                wells = 0;
+                footballCost = 100;
+                footballs = 0;
+                zekeCost = 500;
+                zekes = 0;
+                izzoCost = 1000;
+                izzos = 0;
+                comboCost = 10000;
+                combos = 0;
+                goal = false;
+                document.getElementById("wellscost").innerHTML = wellsCost;
+                document.getElementById("wells").innerHTML = wells;
+                document.getElementById("footballcost").innerHTML = footballCost;
+                document.getElementById("footballs").innerHTML = footballs;
+                document.getElementById("zekecost").innerHTML = zekeCost;
+                document.getElementById("zekes").innerHTML = zekes;
+                document.getElementById("izzocost").innerHTML = izzoCost;
+                document.getElementById("izzos").innerHTML = izzos;
+                document.getElementById("combocost").innerHTML = comboCost;
+                document.getElementById("combos").innerHTML = combos;
             }
             function myfunc(amount) {
                 score = score+amount;
