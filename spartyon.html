@@ -43,7 +43,8 @@
             outline: 5px solid rgb(25, 103, 15);
             margin-top: 15px;
         }
-        body {    
+        body {  
+              
             background-image: url('msu.webp');
             background-attachment: fixed; 
             background-size: cover;
@@ -333,8 +334,12 @@
 
             setInterval (function() {
                 var snd = new Audio('lowbatteryfirealarm.mp3');
-                snd.play();
-            }, 30000);
+                var a = Math.floor(Math.random() * 10);
+                if (a<3) {
+                    
+                    snd.play();
+                }
+            }, 60000);
 
             function money_sound(){
                 var snd = new Audio('cha-ching.mp3');
